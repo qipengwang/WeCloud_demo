@@ -33,7 +33,7 @@ def load_tf_model():
     saver = tf.train.Saver()
     # sess = tf.Session(config=config)
     sess = tf.Session()
-    ckpt_path = '/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/ctpn/ctpn/retrain/ckpt'
+    ckpt_path = f'{os.getcwd()}/ctpn/ctpn/retrain/ckpt'
     ckpt = tf.train.get_checkpoint_state(ckpt_path)
     reader = tf.train.NewCheckpointReader(ckpt.model_checkpoint_path)
     var_to_shape_map = reader.get_variable_to_shape_map()

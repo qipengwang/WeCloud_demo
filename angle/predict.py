@@ -8,6 +8,7 @@
 根据给定的图形，分析文字的朝向
 '''
 # from keras.models import load_model
+import os
 import numpy as np
 from PIL import Image
 from keras.applications.vgg16 import preprocess_input, VGG16
@@ -28,8 +29,7 @@ def load():
     sgd = SGD(lr=0.00001, momentum=0.9)
     model.compile(
         optimizer=sgd, loss='categorical_crossentropy', metrics=['accuracy'])
-    model.load_weights(
-        '/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/angle/modelAngle.h5')
+    model.load_weights(f'{os.getcwd()}/angle/modelAngle.h5')
     return model
 
 

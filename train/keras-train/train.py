@@ -90,16 +90,15 @@ if __name__ == '__main__':
     import os
 
     if os.path.exists(
-            '/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/save_model/my_model_keras.h5'
+            f'{os.getcwd()}/save_model/my_model_keras.h5'
     ):
         basemodel.load_weights(
-            '/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/save_model/my_model_keras.h5'
+            f'{os.getcwd()}/save_model/my_model_keras.h5'
         )
 
     ##注意此处保存的是model的权重
     checkpointer = ModelCheckpoint(
-        filepath=
-        "/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/save_model/my_model_keras.h5",
+        filepath=f"{os.getcwd()}/save_model/my_model_keras.h5",
         monitor='val_loss',
         verbose=0,
         save_weights_only=False,

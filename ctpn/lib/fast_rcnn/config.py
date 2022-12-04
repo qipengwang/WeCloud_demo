@@ -236,7 +236,7 @@ __C.ROOT_DIR = osp.abspath(osp.join(osp.dirname(__file__), '..', '..'))
 # Data directory
 __C.DATA_DIR = osp.abspath(osp.join(__C.ROOT_DIR, 'data'))
 # 将voc的文件位置移到仓库外部
-# __C.DATA_DIR = '/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/ctpn/'
+# __C.DATA_DIR = f'{os.getcwd()}/ctpn/'
 
 # Model directory
 __C.MODELS_DIR = osp.abspath(osp.join(__C.ROOT_DIR, 'models', 'pascal_voc'))

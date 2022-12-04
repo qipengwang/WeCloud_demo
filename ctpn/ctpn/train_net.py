@@ -51,7 +51,7 @@ if __name__ == '__main__':
         output_dir=output_dir,
         log_dir=log_dir,
         # pretrained_model=
-        # '/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/ctpn/pretrain/VGG_imagenet.npy',
+        # f'{os.getcwd()}/ctpn/pretrain/VGG_imagenet.npy',
         # pretrained_model='/home/xiaofeng/data/ctpn/pretrainde_vgg',
         pretrained_model=None,
         max_iters=180000,

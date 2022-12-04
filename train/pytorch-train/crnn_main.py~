@@ -32,7 +32,7 @@ parser.add_argument('--lr', type=float, default=0.00005, help='learning rate for
 parser.add_argument('--beta1', type=float, default=0.5, help='beta1 for adam. default=0.5')
 parser.add_argument('--cuda', action='store_true', help='enables cuda')
 parser.add_argument('--ngpu', type=int, default=1, help='number of GPUs to use')
-parser.add_argument('--crnn', help="path to crnn (to continue training)",default='/Users/xiaofeng/Code/Github/dataset/CHINESE_OCR/crnn_ocr/pretrain/chinsesOcr.pth')
+parser.add_argument('--crnn', help="path to crnn (to continue training)",default=f'{os.getcwd()}/crnn_ocr/pretrain/chinsesOcr.pth')
 #parser.add_argument('--crnn', help="path to crnn (to continue training)",default='')
 parser.add_argument('--alphabet', default=alphabet)
 parser.add_argument('--experiment', help='Where to store samples and models',default='../model')

@@ -1,7 +1,7 @@
 import sys
 sys.path.insert(1, "./crnn")
 import torch.nn as nn
-import utils
+from . import utils
 
 
 class BidirectionalLSTM(nn.Module):
